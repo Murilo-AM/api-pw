@@ -9,7 +9,7 @@ const upload = multer({ dest: "uploads/" });
 
 router.get("/produtos", ProdutosController.findAll);
 router.get("/produtos/:id", ProdutosController.findOne);
-router.post("/produtos", ProdutosController.create);
+router.post("/produtos", upload.single("imagem"), ProdutosController.create);
 router.patch("/produtos/:id", ProdutosController.update);
 router.delete("/produtos/:id", ProdutosController.destroy);
 

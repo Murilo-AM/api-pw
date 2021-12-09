@@ -13,8 +13,10 @@ const findOne = async (req, res) => {
   res.json(produtos);
 };
 const create = async (req, res) => {
-  const produtos = await knex("produtos").insert(req.body);
-  res.json(produtos);
+  console.log('dwdwadwad')
+  console.log(req.file)
+  /* const produtos = await knex("produtos").insert(req.body);
+  res.json(produtos); */
 };
 const update = async function (req, res) {
   const produtos = await knex("produtos")
